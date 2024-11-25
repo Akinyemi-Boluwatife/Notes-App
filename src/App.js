@@ -2,6 +2,7 @@ function App() {
   return (
     <div>
       <Header />
+      <Search />
     </div>
   );
 }
@@ -9,27 +10,31 @@ function App() {
 function Header() {
   return (
     <nav>
-      <ul>
-        <li>
-          <a href="#header" className="hamburger">
-            &#9776;
-          </a>
+      <ul className="cont">
+        <li className="hamburger">
+          <button>
+            <a href="#header">
+              <img src="ham.svg" alt="img"></img>
+            </a>
+          </button>
         </li>
+
         <li>
           <a href="#header">
             <img src="search.svg" alt="img" />
           </a>
         </li>
-        <li>
-          <a href="#header" className="logo">
-            JOT
-          </a>
+
+        <li className="logo">
+          <a href="#header">BOLU</a>
         </li>
+
         <li>
           <a href="#header">
-            <img src="love.svg" alt="img"></img>``
+            <img src="love.svg" alt="img"></img>
           </a>
         </li>
+
         <li>
           <a href="#header">
             <img src="vertical.svg" alt="img"></img>
@@ -38,6 +43,10 @@ function Header() {
       </ul>
     </nav>
   );
+}
+
+function Search() {
+  <form></form>;
 }
 
 export default App;

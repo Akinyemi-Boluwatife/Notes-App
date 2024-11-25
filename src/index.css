@@ -3,17 +3,49 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
+button {
+  all: unset;
+}
 body {
   background-color: #272626;
-  color: ;
 }
 nav {
-  border: 2px solid red;
-  width: 80%;
+  /* border: 2px solid red; */
+  width: 90%;
   margin: auto;
 }
-nav,
-img {
-  width: 20px;
-  height: 20px;
+
+/* nav ul li {
+  display: inline-block;
+} */
+.logo {
+  /* border: 2px solid red; */
+  width: 90px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+}
+.logo a {
+  color: #f28c28;
+  line-height: 30px;
+  letter-spacing: 10px;
+  font-size: 27px;
+}
+
+/* nav li:nth-child(3) {
+  flex: 2;
+} */
+nav img {
+  width: 27px;
+  height: 27px;
+}
+nav .cont {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 15px;
+  justify-content: space-between;
 }
