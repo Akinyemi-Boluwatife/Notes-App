@@ -46,7 +46,17 @@ function Header() {
 }
 
 function Search() {
-  <form></form>;
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(e);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" placeholder="Search for notes/todo"></input>
+      <button type="submit">Submit</button>
+    </form>
+  );
 }
 
 export default App;

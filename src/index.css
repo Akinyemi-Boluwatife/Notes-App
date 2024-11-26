@@ -11,6 +11,7 @@ button {
 }
 body {
   background-color: #272626;
+  color: white;
 }
 nav {
   /* border: 2px solid red; */
@@ -33,10 +34,6 @@ nav {
   letter-spacing: 10px;
   font-size: 27px;
 }
-
-/* nav li:nth-child(3) {
-  flex: 2;
-} */
 nav img {
   width: 27px;
   height: 27px;
@@ -49,3 +46,30 @@ nav .cont {
   padding: 15px;
   justify-content: space-between;
 }
+form {
+  width: 85%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+form input {
+  height: 50px;
+  width: 60%;
+  padding-left: 40px; /* Adjust padding to make room for the image */
+  background: url("search.svg") no-repeat 10px center;
+  background-size: 20px 20px;
+  border: 2px solid #f28c28;
+  border-radius: 8px;
+  color: aliceblue;
+}
+form button {
+  height: 50px;
+  width: 30%;
+  border: 2px solid #f28c28;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* form button:hover{
+
+} */
