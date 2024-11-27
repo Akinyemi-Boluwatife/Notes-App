@@ -46,13 +46,13 @@ nav .cont {
   padding: 15px;
   justify-content: space-between;
 }
-form {
+.search {
   width: 85%;
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
 }
-form input {
+.search input {
   height: 50px;
   width: 60%;
   padding-left: 40px; /* Adjust padding to make room for the image */
@@ -62,7 +62,7 @@ form input {
   border-radius: 8px;
   color: aliceblue;
 }
-form button {
+.search button {
   height: 50px;
   width: 30%;
   border: 2px solid #f28c28;
@@ -70,6 +70,33 @@ form button {
   border-radius: 10px;
 }
 
-/* form button:hover{
+form button:hover {
+  background-color: #bff1f4;
+  color: #f28c28;
+  border-color: black;
+}
 
-} */
+.form-inp {
+  width: 85%;
+  margin: auto;
+  height: 100px;
+  border: 2px solid #f28c28;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+  /* gap: 3rem; */
+  align-items: center;
+}
+.form-inp textarea {
+  /* max-width: 200px; */
+  width: 60%;
+  max-height: 80px;
+  border: 2px solid #f28c28;
+  background-color: #272626;
+}
+.btn-note-list {
+  border: 3px solid #bff1f4;
+  padding: 10px;
+  border-radius: 50%;
+}
