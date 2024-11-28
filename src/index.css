@@ -29,7 +29,7 @@ nav {
   text-align: center;
 }
 .logo a {
-  color: #f28c28;
+  color: #fedcc0;
   line-height: 30px;
   letter-spacing: 10px;
   font-size: 27px;
@@ -58,14 +58,14 @@ nav .cont {
   padding-left: 40px; /* Adjust padding to make room for the image */
   background: url("search.svg") no-repeat 10px center;
   background-size: 20px 20px;
-  border: 2px solid #f28c28;
+  border: 2px solid #fedcc0;
   border-radius: 8px;
-  color: aliceblue;
+  color: #bff1f4;
 }
 .search button {
   height: 50px;
   width: 30%;
-  border: 2px solid #f28c28;
+  border: 2px solid #fedcc0;
   text-align: center;
   border-radius: 10px;
 }
@@ -76,27 +76,65 @@ form button:hover {
   border-color: black;
 }
 
+.form-inp-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border: 2px solid #f28c28;
+}
 .form-inp {
   width: 85%;
   margin: auto;
   height: 100px;
-  border: 2px solid #f28c28;
+  /* border: 2px solid #f28c28; */
   display: flex;
-  justify-content: center;
   justify-content: space-between;
-  padding-right: 1rem;
-  /* gap: 3rem; */
   align-items: center;
 }
 .form-inp textarea {
-  /* max-width: 200px; */
-  width: 60%;
+  color: #bff1f4;
+  font-size: 17px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  max-width: 60%;
+  /* width: 60%; */
   max-height: 80px;
-  border: 2px solid #f28c28;
+  border: 2px solid #fedcc0;
   background-color: #272626;
 }
 .btn-note-list {
-  border: 3px solid #bff1f4;
+  border: 3px solid #fedcc0;
   padding: 10px;
   border-radius: 50%;
+}
+.to-no {
+  height: 50px;
+  width: 30%;
+  border: 2px solid #fedcc0;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #272626;
+  color: #bff1f4;
+}
+
+.todonotelist {
+  color: white;
+  /* border: 2px solid #f28c28; */
+  width: 80%;
+  margin: auto;
+  color: black;
+}
+.todonotelist ul li {
+  list-style-type: none;
+}
+.list-container {
+  border: 2px solid goldenrod;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 0.5rem; */
+}
+
+.list {
+  width: 9.5rem;
+  padding: 1rem;
 }

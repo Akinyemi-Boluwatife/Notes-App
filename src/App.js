@@ -1,4 +1,4 @@
-const list = [
+const message = [
   {
     id: 1,
     Type: "Todo",
@@ -20,6 +20,13 @@ const list = [
     content:
       "The topic is about introduction to algorithms and it specifies their uses and how to write it efficiently ",
   },
+  {
+    id: 4,
+    Type: "Todo",
+    Title: "mth102",
+    content:
+      "The topic is about introduction to algebra and how to derive their formula ",
+  },
 ];
 function App() {
   return (
@@ -27,6 +34,7 @@ function App() {
       <Header />
       <Search />
       <Form />
+      <TodoNoteList />
     </div>
   );
 }
@@ -89,10 +97,52 @@ function Form() {
   }
 
   return (
-    <form className="form-inp" onSubmit={handleSubmit}>
-      <textarea placeholder="write........." cols="35" rows="7"></textarea>
-      <button className="btn-note-list">+</button>
-    </form>
+    <div className="form-inp-wrapper">
+      <form className="form-inp" onSubmit={handleSubmit} name="info">
+        <textarea
+          placeholder="write the content..."
+          cols="35"
+          rows="7"
+        ></textarea>
+        <select className="to-no">
+          <option value="note">Note</option>
+          <option value="Todo">Todo</option>
+        </select>
+      </form>
+      <div className="add-note/todo">
+        <button className="btn-note-list">+</button>
+      </div>
+    </div>
+  );
+}
+
+function TodoNoteList() {
+  return (
+    <div className="todonotelist">
+      <ul className="list-container">
+        {message.map((mess) => (
+          <List message={mess} key={mess.id} />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function List({ message }) {
+  return (
+    <li
+      className="list"
+      style={
+        message.id % 2 === 0
+          ? { backgroundColor: "#fedede" }
+          : { backgroundColor: "#ccf0bb" }
+      }
+    >
+      <h2>{message.Title}</h2>
+      <p>
+        {message.id}, {message.content}
+      </p>
+    </li>
   );
 }
 
