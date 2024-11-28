@@ -104,6 +104,7 @@ function Form() {
           cols="35"
           rows="7"
         ></textarea>
+        <input type="text" placeholder="Please write the title"></input>
         <select className="to-no">
           <option value="note">Note</option>
           <option value="Todo">Todo</option>
@@ -138,9 +139,9 @@ function List({ message }) {
           : { backgroundColor: "#ccf0bb" }
       }
     >
-      <h2>{message.Title}</h2>
+      <h3>{message.Title}</h3>
       <p>
-        {message.id}, {message.content}
+        {message.id}. {message.content}
       </p>
     </li>
   );
