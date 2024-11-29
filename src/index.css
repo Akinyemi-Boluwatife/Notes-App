@@ -157,3 +157,6 @@ form button:hover {
 .list h3 {
   margin: 1rem;
 }
+.todonotelist ul li {
+  list-style-type: none;
+}
