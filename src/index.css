@@ -44,6 +44,7 @@ nav .cont {
 }
 .search {
   width: 85%;
+  max-width: 35rem;
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
@@ -74,6 +75,7 @@ form button:hover {
 
 .form-inp-wrapper {
   width: 85%;
+  max-width: 35rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -82,12 +84,10 @@ form button:hover {
   /* border: 2px solid #f28c28; */
 }
 .form-inp {
-  height: 150px;
-  max-height: 180px;
   /* border: 2px solid #f28c28; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 0.7rem;
   overflow: hidden;
 }
 .form-inp textarea {
@@ -106,7 +106,7 @@ form button:hover {
 }
 .to-no {
   height: 60px;
-  width: 30%;
+  width: 25%;
   border: 2px solid #fedcc0;
   text-align: center;
   border-radius: 10px;
@@ -114,12 +114,20 @@ form button:hover {
   color: #bff1f4;
 }
 .form-inp input {
+  width: 45%;
   padding-left: 2rem;
   height: 60px;
   background-color: #272626;
   border: 2px solid #fedcc0;
   border-radius: 8px;
   color: #bff1f4;
+}
+.form-inp .sub {
+  width: 20%;
+  height: 57px;
+  text-align: center;
+  border: 2px solid #fedcc0;
+  border-radius: 10px;
 }
 .btn-note-list {
   border: 3px solid #fedcc0;
@@ -136,12 +144,14 @@ form button:hover {
   color: white;
   /* border: 2px solid #f28c28; */
   width: 80%;
+  max-width: 35rem;
   margin: 1rem auto;
   color: black;
 }
 .list-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* Donot forget to tweek  it for responsiveness*/
   gap: 1em;
 }
 .list {
@@ -157,8 +167,11 @@ form button:hover {
   list-style-type: none;
 }
 .sort {
-  text-align: center;
   margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .sort select {
   background-color: #272626;
@@ -166,6 +179,7 @@ form button:hover {
   background-color: #e5284f;
   color: #bff1f4;
   border-radius: 14px;
+  text-align: center;
 }
 .sort button {
   /* border: 2px solid #e5284f; */
@@ -179,4 +193,27 @@ form button:hover {
   background-color: #bff1f4;
   color: #f28c28;
   border-color: black;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1280px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .search {
+    max-width: 40rem;
+  }
+  .form-inp-wrapper {
+    width: 85%;
+    max-width: 40rem;
+  }
+  .todonotelist {
+    max-width: 50rem;
+  }
+  .list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

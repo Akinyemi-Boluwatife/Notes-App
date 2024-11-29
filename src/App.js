@@ -104,11 +104,14 @@ function Form() {
           cols="35"
           rows="7"
         ></textarea>
-        <input type="text" placeholder="Please write the title"></input>
+        <input type="text" placeholder="Input title"></input>
         <select className="to-no">
           <option value="note">Note</option>
           <option value="Todo">Todo</option>
         </select>
+        <button type="submit" className="sub">
+          Submit
+        </button>
       </form>
       <div className="add-note/todo">
         <button className="btn-note-list">+</button>
