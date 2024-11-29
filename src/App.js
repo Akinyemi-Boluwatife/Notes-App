@@ -130,6 +130,7 @@ function TodoNoteList() {
           <option value="id">Sort by how you inputed the list</option>
           <option value="title">Sort alphabetically</option>
         </select>
+        <button>Clear List</button>
       </div>
     </div>
   );

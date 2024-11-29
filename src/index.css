@@ -18,10 +18,6 @@ nav {
   width: 90%;
   margin: auto;
 }
-
-/* nav ul li {
-  display: inline-block;
-} */
 .logo {
   /* border: 2px solid red; */
   width: 90px;
@@ -118,6 +114,7 @@ form button:hover {
   color: #bff1f4;
 }
 .form-inp input {
+  padding-left: 2rem;
   height: 60px;
   background-color: #272626;
   border: 2px solid #fedcc0;
@@ -129,6 +126,11 @@ form button:hover {
   padding: 10px;
   border-radius: 50%;
 }
+.btn-note-list:hover {
+  background-color: #bff1f4;
+  color: #f28c28;
+  border-color: black;
+}
 
 .todonotelist {
   color: white;
@@ -137,17 +139,11 @@ form button:hover {
   margin: 1rem auto;
   color: black;
 }
-/* .todonotelist ul li {
-  list-style-type: none;
-} */
 .list-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
 }
-/* .list-container > * {
-  flex: 1;
-} */
 .list {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -170,4 +166,17 @@ form button:hover {
   background-color: #e5284f;
   color: #bff1f4;
   border-radius: 14px;
+}
+.sort button {
+  /* border: 2px solid #e5284f; */
+  margin-left: 1rem;
+  padding: 0.8rem;
+  border-radius: 14px;
+  background-color: #e5284f;
+  color: #bff1f4;
+}
+.sort button:hover {
+  background-color: #bff1f4;
+  color: #f28c28;
+  border-color: black;
 }
