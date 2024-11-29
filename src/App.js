@@ -125,6 +125,12 @@ function TodoNoteList() {
           <List message={mess} key={mess.id} />
         ))}
       </ul>
+      <div className="sort">
+        <select>
+          <option value="id">Sort by how you inputed the list</option>
+          <option value="title">Sort alphabetically</option>
+        </select>
+      </div>
     </div>
   );
 }

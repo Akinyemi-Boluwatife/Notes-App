@@ -160,3 +160,14 @@ form button:hover {
 .todonotelist ul li {
   list-style-type: none;
 }
+.sort {
+  text-align: center;
+  margin: 2rem;
+}
+.sort select {
+  background-color: #272626;
+  height: 3rem;
+  background-color: #e5284f;
+  color: #bff1f4;
+  border-radius: 14px;
+}
