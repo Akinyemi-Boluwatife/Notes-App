@@ -38,12 +38,21 @@ function App() {
     // console.log(data);
   }
   console.log(data);
+
+  function handleClearList() {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete all items"
+    );
+    if (confirmed) {
+      setData((data) => []);
+    } else;
+  }
   return (
     <div>
       <Header />
       <Search />
       <Form onGetData={handleGetData} />
-      <TodoNoteList data={data} />
+      <TodoNoteList data={data} onClearList={handleClearList} />
     </div>
   );
 }
@@ -158,7 +167,11 @@ function Form({ onGetData }) {
   );
 }
 
-function TodoNoteList({ data }) {
+function TodoNoteList({ data, onClearList }) {
+  // if(!data.length) return <div>
+  //   <p>Please input</p>
+  // </div>
+
   const [sort, setSort] = useState("id");
 
   let sortedItems;
@@ -181,13 +194,13 @@ function TodoNoteList({ data }) {
           <option value="id">Sort by how you inputed the list</option>
           <option value="title">Sort alphabetically</option>
         </select>
-        <button>Clear List</button>
+        <button onClick={onClearList}>Clear List</button>
       </div>
     </div>
   );
 }
 
-function List({ message }) {
+function List({ message, data }) {
   return (
     <li
       className="list"
