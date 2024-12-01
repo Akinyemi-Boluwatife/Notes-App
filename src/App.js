@@ -31,11 +31,18 @@ const message1 = [
   },
 ];
 function App() {
+  const [data, setData] = useState([]);
+
+  function handleGetData(message) {
+    setData((data) => [...data, message]);
+    console.log(data);
+  }
+
   return (
     <div>
       <Header />
       <Search />
-      <Form />
+      <Form onGetData={handleGetData} />
       <TodoNoteList />
     </div>
   );
@@ -93,17 +100,22 @@ function Search() {
   );
 }
 
-function Form() {
+function Form({ onGetData }) {
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
   const [typeOfContent, setTypeOfContent] = useState("Note");
 
   function handleSubmit(e) {
     e.preventDefault();
-    // console.log(content, title, typeOfContent);
+    if (!title || !content) return;
 
-    const message = { content, title, typeOfContent };
-    console.log(message);
+    const newMessage = { content, title, typeOfContent };
+
+    onGetData(newMessage);
+
+    setContent("");
+    setTypeOfContent("Note");
+    setTitle("");
   }
 
   return (
