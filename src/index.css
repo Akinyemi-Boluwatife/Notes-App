@@ -48,11 +48,11 @@ nav .cont {
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .search input {
-  height: 50px;
   width: 60%;
-  padding-left: 40px; /* Adjust padding to make room for the image */
+  padding: 1rem 1rem 1rem 40px; /* Adjust padding to make room for the image */
   background: url("search.svg") no-repeat 10px center;
   background-size: 20px 20px;
   border: 2px solid #fedcc0;
@@ -60,7 +60,7 @@ nav .cont {
   color: #bff1f4;
 }
 .search button {
-  height: 50px;
+  padding: 1rem 0 1rem 0;
   width: 30%;
   border: 2px solid #fedcc0;
   text-align: center;
@@ -86,8 +86,9 @@ form button:hover {
 .form-inp {
   /* border: 2px solid #f28c28; */
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.7rem;
+  padding-bottom: 0.5rem;
   overflow: hidden;
 }
 .form-inp textarea {
@@ -97,6 +98,7 @@ form button:hover {
   color: #bff1f4;
   font-size: 17px;
   padding: 0.5rem 0.5rem 0 0.5rem;
+  margin-bottom: 0.5rem;
   border: 2px solid #fedcc0;
   background-color: #272626;
 }

@@ -1,4 +1,6 @@
-const message = [
+import { useState } from "react";
+
+const message1 = [
   {
     id: 1,
     Type: "Todo",
@@ -92,8 +94,16 @@ function Search() {
 }
 
 function Form() {
+  const [content, setContent] = useState("");
+  const [title, setTitle] = useState("");
+  const [typeOfContent, setTypeOfContent] = useState("Note");
+
   function handleSubmit(e) {
     e.preventDefault();
+    // console.log(content, title, typeOfContent);
+
+    const message = { content, title, typeOfContent };
+    console.log(message);
   }
 
   return (
@@ -103,9 +113,20 @@ function Form() {
           placeholder="write the content..."
           cols="35"
           rows="7"
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
         ></textarea>
-        <input type="text" placeholder="Input title"></input>
-        <select className="to-no">
+        <input
+          type="text"
+          placeholder="Input title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        ></input>
+        <select
+          className="to-no"
+          value={typeOfContent}
+          onChange={(e) => setTypeOfContent(e.target.value)}
+        >
           <option value="note">Note</option>
           <option value="Todo">Todo</option>
         </select>
@@ -124,7 +145,7 @@ function TodoNoteList() {
   return (
     <div className="todonotelist">
       <ul className="list-container">
-        {message.map((mess) => (
+        {message1.map((mess) => (
           <List message={mess} key={mess.id} />
         ))}
       </ul>
